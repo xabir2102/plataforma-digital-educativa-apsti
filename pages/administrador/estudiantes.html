@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gestión de Estudiantes - APSTI</title>
+
+    <!-- CSS DEL ADMINISTRADOR -->
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="admin-container">
+
+
+    <!-- ==================================================
+         MENÚ LATERAL
+    =================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <h1>
+                🎓 APSTI
+            </h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <!-- MENÚ -->
+
+        <nav class="menu">
+
+
+            <!-- INICIO -->
+
+            <a href="administrador.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <!-- ESTUDIANTES -->
+
+            <a
+                href="estudiantes.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    👨‍🎓
+                </span>
+
+                Estudiantes
+
+            </a>
+
+
+            <!-- DOCENTES -->
+
+            <a href="docentes.html">
+
+                <span class="menu-icono">
+                    👨‍🏫
+                </span>
+
+                Docentes
+
+            </a>
+
+
+            <!-- CURSOS -->
+
+            <a href="cursos.html">
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Cursos
+
+            </a>
+
+
+            <!-- PROYECTOS -->
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+        </nav>
+
+
+        <!-- PIE DEL MENÚ -->
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales
+                para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         CONTENIDO PRINCIPAL
+    =================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- ==================================================
+             BARRA SUPERIOR
+        =================================================== -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Gestión de estudiantes
+            </h2>
+
+
+            <div class="usuario">
+
+                👤
+
+                <span>
+                    Administrador
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==================================================
+             CONTENIDO
+        =================================================== -->
+
+        <section class="contenido">
+
+
+            <!-- ==================================================
+                 BANNER
+            =================================================== -->
+
+            <div class="banner-admin">
+
+
+                <h1>
+                    Gestión de Estudiantes
+                </h1>
+
+
+                <p>
+                    Registra y administra la información de los
+                    estudiantes de la Plataforma Digital Educativa
+                    APSTI.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 FORMULARIO
+            =================================================== -->
+
+            <form
+                id="formEstudiante"
+                class="formulario-admin"
+            >
+
+
+                <!-- ==============================================
+                     ENCABEZADO DEL FORMULARIO
+                =============================================== -->
+
+                <div class="titulo-formulario">
+
+                    <h2>
+                        Registrar estudiante
+                    </h2>
+
+                    <p>
+                        Ingresa la información del estudiante.
+                        El sistema generará automáticamente sus
+                        credenciales de acceso.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==============================================
+                     DATOS DEL ESTUDIANTE
+                =============================================== -->
+
+                <div class="campos-formulario">
+
+
+                    <!-- CÓDIGO -->
+
+                    <div class="campo">
+
+                        <label for="codigo">
+                            Código del estudiante
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigo"
+                            name="codigo"
+                            placeholder="Ejemplo: EST001"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DNI -->
+
+                    <div class="campo">
+
+                        <label for="dni">
+                            DNI
+                        </label>
+
+                        <input
+                            type="text"
+                            id="dni"
+                            name="dni"
+                            placeholder="Ingrese 8 dígitos"
+                            maxlength="8"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- NOMBRES -->
+
+                    <div class="campo">
+
+                        <label for="nombres">
+                            Nombres
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombres"
+                            name="nombres"
+                            placeholder="Ingrese los nombres"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- APELLIDOS -->
+
+                    <div class="campo">
+
+                        <label for="apellidos">
+                            Apellidos
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellidos"
+                            name="apellidos"
+                            placeholder="Ingrese los apellidos"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CORREO INSTITUCIONAL -->
+
+                    <div class="campo">
+
+                        <label for="correo">
+                            Correo institucional
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="Se generará automáticamente"
+                            readonly
+                        >
+
+                    </div>
+
+
+
+                    <!-- TELÉFONO -->
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ingrese 9 dígitos"
+                            maxlength="9"
+                            inputmode="numeric"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEMESTRE -->
+
+                    <div class="campo">
+
+                        <label for="semestre">
+                            Semestre
+                        </label>
+
+                        <select
+                            id="semestre"
+                            name="semestre"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estado">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estado"
+                            name="estado"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Activo">
+                                Activo
+                            </option>
+
+                            <option value="Inactivo">
+                                Inactivo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     CREDENCIALES DE ACCESO
+                =================================================== -->
+
+                <div class="seccion-credenciales">
+
+
+                    <!-- ENCABEZADO -->
+
+                    <div class="titulo-credenciales">
+
+
+                        <div class="icono-credenciales">
+                            🔐
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Credenciales de acceso
+                            </h3>
+
+                            <p>
+                                El sistema genera automáticamente
+                                las credenciales utilizando los
+                                datos del estudiante.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- CAMPOS DE CREDENCIALES -->
+
+                    <div class="campos-credenciales">
+
+
+                        <!-- USUARIO -->
+
+                        <div class="campo">
+
+                            <label for="usuario">
+                                Usuario
+                            </label>
+
+                            <input
+                                type="text"
+                                id="usuario"
+                                name="usuario"
+                                placeholder="Se generará automáticamente"
+                                readonly
+                            >
+
+                        </div>
+
+
+
+                        <!-- CONTRASEÑA -->
+
+                        <div class="campo">
+
+                            <label for="contrasena">
+                                Contraseña temporal
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contrasena"
+                                name="contrasena"
+                                placeholder="Se generará al registrar"
+                                readonly
+                            >
+
+                        </div>
+
+
+
+                        <!-- ROL -->
+
+                        <div class="campo">
+
+                            <label for="rol">
+                                Rol
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rol"
+                                name="rol"
+                                value="Estudiante"
+                                readonly
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- INFORMACIÓN -->
+
+                    <div class="nota-credenciales">
+
+                        <span>
+                            ℹ️
+                        </span>
+
+                        <p>
+                            El correo institucional y la contraseña
+                            temporal serán generados automáticamente.
+                            Si el estudiante olvida su contraseña,
+                            el administrador podrá restablecerla.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     BOTONES DEL FORMULARIO
+                =================================================== -->
+
+                <div class="acciones-formulario">
+
+
+                    <!-- REGISTRAR -->
+
+                    <button
+                        type="submit"
+                        class="btn-guardar"
+                    >
+                        💾 Registrar estudiante
+                    </button>
+
+
+
+                    <!-- LIMPIAR -->
+
+                    <button
+                        type="reset"
+                        class="btn-limpiar"
+                    >
+                        🧹 Limpiar
+                    </button>
+
+
+
+                    <!-- VOLVER -->
+
+                    <a
+                        href="administrador.html"
+                        class="btn-volver"
+                    >
+                        ← Volver al panel
+                    </a>
+
+
+                </div>
+
+
+            </form>
+
+
+
+            <!-- ==================================================
+                 ESTUDIANTES REGISTRADOS
+            =================================================== -->
+
+            <div class="lista-estudiantes">
+
+
+                <!-- CABECERA -->
+
+                <div class="encabezado-lista">
+
+
+                    <div>
+
+                        <h2>
+                            Estudiantes registrados
+                        </h2>
+
+                        <p>
+                            Consulta y administra los estudiantes
+                            registrados en el sistema.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- BUSCADOR -->
+
+                    <div class="contenedor-busqueda">
+
+                        <input
+                            type="search"
+                            id="buscarEstudiante"
+                            placeholder="Buscar estudiante..."
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     TABLA
+                =================================================== -->
+
+                <div class="tabla-contenedor">
+
+
+                    <table class="tabla-estudiantes">
+
+
+                        <!-- ENCABEZADO -->
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Código
+                                </th>
+
+                                <th>
+                                    Estudiante
+                                </th>
+
+                                <th>
+                                    DNI
+                                </th>
+
+                                <th>
+                                    Usuario
+                                </th>
+
+                                <th>
+                                    Semestre
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <!-- CUERPO -->
+
+                        <tbody id="tablaEstudiantes">
+
+
+                            <!--
+                                JavaScript agregará aquí
+                                los estudiantes registrados.
+                            -->
+
+                            <tr id="sinRegistros">
+
+                                <td
+                                    colspan="7"
+                                    class="sin-registros"
+                                >
+
+                                    No hay estudiantes
+                                    registrados actualmente.
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 INFORMACIÓN INFERIOR
+            =================================================== -->
+
+            <div class="info-admin">
+
+
+                <div>
+
+                    <h3>
+                        Administración de estudiantes
+                    </h3>
+
+                    <p>
+                        Gestiona la información y las cuentas
+                        de acceso de los estudiantes del programa
+                        APSTI.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="botones-admin">
+
+
+                    <!-- PANEL ADMINISTRADOR -->
+
+                    <a
+                        href="administrador.html"
+                        class="btn-inicio"
+                    >
+                        🏠 Panel administrativo
+                    </a>
+
+
+
+                    <!-- CERRAR SESIÓN -->
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT DE GESTIÓN DE ESTUDIANTES
+=================================================== -->
+
+<script src="../../js/administrador/admin-estudiantes.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Material Educativo - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/estudiante.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="estudiante-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="estudiante.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a
+                href="materiales.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="estudiante-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Material educativo
+            </h2>
+
+
+            <div class="usuario">
+
+                🎓
+
+                <span>
+                    Estudiante
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- ==========================================
+                 BANNER
+            =========================================== -->
+
+            <div class="banner-estudiante">
+
+
+                <div>
+
+                    <span class="banner-etiqueta">
+                        Recursos educativos
+                    </span>
+
+
+                    <h1>
+                        Material Educativo
+                    </h1>
+
+
+                    <p>
+                        Consulta documentos, guías, videos,
+                        tutoriales, presentaciones y otros recursos
+                        compartidos por tus docentes.
+                    </p>
+
+                </div>
+
+
+                <div class="banner-icono">
+                    📚
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 ENCABEZADO Y FILTROS
+            =========================================== -->
+
+            <div class="cabecera-consulta">
+
+
+                <div>
+
+                    <h2>
+                        Recursos disponibles
+                    </h2>
+
+                    <p>
+                        Encuentra material educativo publicado
+                        para apoyar tu aprendizaje.
+                    </p>
+
+                </div>
+
+
+                <div class="filtros-estudiante">
+
+
+                    <!-- FILTRO SEMESTRE -->
+
+                    <select id="filtroSemestreMaterial">
+
+                        <option value="Todos">
+                            Todos los semestres
+                        </option>
+
+                        <option value="I">
+                            I Semestre
+                        </option>
+
+                        <option value="II">
+                            II Semestre
+                        </option>
+
+                        <option value="III">
+                            III Semestre
+                        </option>
+
+                        <option value="IV">
+                            IV Semestre
+                        </option>
+
+                        <option value="V">
+                            V Semestre
+                        </option>
+
+                        <option value="VI">
+                            VI Semestre
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- FILTRO TIPO -->
+
+                    <select id="filtroTipoMaterial">
+
+                        <option value="Todos">
+                            Todos los tipos
+                        </option>
+
+                        <option value="Documento">
+                            Documento
+                        </option>
+
+                        <option value="Guía">
+                            Guía
+                        </option>
+
+                        <option value="Video">
+                            Video
+                        </option>
+
+                        <option value="Tutorial">
+                            Tutorial
+                        </option>
+
+                        <option value="Presentación">
+                            Presentación
+                        </option>
+
+                        <option value="Sitio web">
+                            Sitio web
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- BUSCADOR -->
+
+                    <input
+                        type="search"
+                        id="buscarMaterialEstudiante"
+                        placeholder="Buscar material..."
+                    >
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 CONTADOR
+            =========================================== -->
+
+            <div class="resumen-consulta">
+
+                <span>
+                    📚
+                </span>
+
+
+                <p>
+
+                    Se encontraron
+
+                    <strong id="cantidadMateriales">
+                        0
+                    </strong>
+
+                    recursos educativos.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 LISTADO DE MATERIALES
+            =========================================== -->
+
+            <div
+                id="listaMaterialesEstudiante"
+                class="grid-consulta"
+            >
+
+
+                <div class="sin-resultados">
+
+                    <span>
+                        📚
+                    </span>
+
+                    <h3>
+                        No hay materiales disponibles
+                    </h3>
+
+                    <p>
+                        Actualmente no existen recursos educativos
+                        publicados para mostrar.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-estudiante">
+
+
+                <div>
+
+                    <h3>
+                        Recursos de aprendizaje
+                    </h3>
+
+
+                    <p>
+                        Utiliza los materiales publicados por tus
+                        docentes como apoyo para tus actividades
+                        y aprendizaje académico.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-estudiante">
+
+
+                    <a
+                        href="estudiante.html"
+                        class="btn-principal"
+                    >
+                        🏠 Volver al panel
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/estudiante/estudiante-materiales.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gestión de Cursos - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="admin-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="administrador.html">
+
+                <span class="menu-icono">🏠</span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="estudiantes.html">
+
+                <span class="menu-icono">👨‍🎓</span>
+
+                Estudiantes
+
+            </a>
+
+
+            <a href="docentes.html">
+
+                <span class="menu-icono">👨‍🏫</span>
+
+                Docentes
+
+            </a>
+
+
+            <a
+                href="cursos.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">📚</span>
+
+                Cursos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">💻</span>
+
+                Proyectos
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>APSTI</strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="admin-main">
+
+
+        <header class="topbar">
+
+            <h2>
+                Gestión de cursos
+            </h2>
+
+            <div class="usuario">
+
+                👤
+
+                <span>
+                    Administrador
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <section class="contenido">
+
+
+            <!-- BANNER -->
+
+            <div class="banner-admin">
+
+                <h1>
+                    Gestión de Cursos
+                </h1>
+
+                <p>
+                    Registra, organiza y administra los cursos
+                    académicos del programa APSTI según el semestre
+                    al que pertenecen.
+                </p>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 FORMULARIO
+            =========================================== -->
+
+            <form
+                id="formCurso"
+                class="formulario-admin"
+            >
+
+
+                <div class="titulo-formulario">
+
+                    <h2>
+                        Registrar curso
+                    </h2>
+
+                    <p>
+                        Completa la información y selecciona
+                        correctamente el semestre al que pertenece
+                        el curso.
+                    </p>
+
+                </div>
+
+
+
+                <div class="campos-formulario">
+
+
+                    <!-- CÓDIGO -->
+
+                    <div class="campo">
+
+                        <label for="codigoCurso">
+                            Código del curso
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigoCurso"
+                            name="codigoCurso"
+                            placeholder="Ejemplo: CUR001"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- NOMBRE -->
+
+                    <div class="campo">
+
+                        <label for="nombreCurso">
+                            Nombre del curso
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombreCurso"
+                            name="nombreCurso"
+                            placeholder="Ejemplo: Programación Web"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEMESTRE -->
+
+                    <div class="campo">
+
+                        <label for="semestreCurso">
+                            Semestre
+                        </label>
+
+                        <select
+                            id="semestreCurso"
+                            name="semestreCurso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DOCENTE -->
+
+                    <div class="campo">
+
+                        <label for="docenteCurso">
+                            Docente responsable
+                        </label>
+
+                         <select
+                            id="docenteCurso"
+                            name="docenteCurso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione un docente
+                            </option>
+
+                        </select>   
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estadoCurso">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estadoCurso"
+                            name="estadoCurso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Activo">
+                                Activo
+                            </option>
+
+                            <option value="Inactivo">
+                                Inactivo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="campo campo-descripcion">
+
+                    <label for="descripcionCurso">
+                        Descripción del curso
+                    </label>
+
+                    <textarea
+                        id="descripcionCurso"
+                        name="descripcionCurso"
+                        placeholder="Escribe una breve descripción del curso..."
+                        maxlength="300"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-formulario">
+
+                    <button
+                        type="submit"
+                        class="btn-guardar"
+                    >
+                        💾 Registrar curso
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn-limpiar"
+                    >
+                        🧹 Limpiar
+                    </button>
+
+
+                    <a
+                        href="administrador.html"
+                        class="btn-volver"
+                    >
+                        ← Volver al panel
+                    </a>
+
+                </div>
+
+
+            </form>
+
+
+
+            <!-- ==========================================
+                 CURSOS REGISTRADOS
+            =========================================== -->
+
+            <div class="lista-estudiantes">
+
+
+                <div class="encabezado-lista">
+
+                    <div>
+
+                        <h2>
+                            Cursos registrados
+                        </h2>
+
+                        <p>
+                            Consulta los cursos y ordénalos
+                            según el semestre.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles-cursos">
+
+
+                        <!-- FILTRO -->
+
+                        <select id="filtroSemestre">
+
+                            <option value="Todos">
+                                Todos los semestres
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+
+                        <!-- BUSCADOR -->
+
+                        <input
+                            type="search"
+                            id="buscarCurso"
+                            placeholder="Buscar curso..."
+                        >
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TABLA -->
+
+                <div class="tabla-contenedor">
+
+                    <table class="tabla-estudiantes">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Código
+                                </th>
+
+                                <th>
+                                    Curso
+                                </th>
+
+                                <th>
+                                    Semestre
+                                </th>
+
+                                <th>
+                                    Docente
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="tablaCursos">
+
+                            <tr>
+
+                                <td
+                                    colspan="6"
+                                    class="sin-registros"
+                                >
+                                    No hay cursos registrados
+                                    actualmente.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-admin">
+
+                <div>
+
+                    <h3>
+                        Administración de cursos
+                    </h3>
+
+                    <p>
+                        Organiza los cursos académicos del programa
+                        APSTI de acuerdo con su semestre.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-admin">
+
+                    <a
+                        href="administrador.html"
+                        class="btn-inicio"
+                    >
+                        🏠 Panel administrativo
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/administrador/admin-cursos.js"></script>
+
+
+</body>
+
+</html>

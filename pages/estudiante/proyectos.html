@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Proyectos - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/estudiante.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="estudiante-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="estudiante.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a
+                href="proyectos.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="estudiante-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Proyectos
+            </h2>
+
+
+            <div class="usuario">
+
+                🎓
+
+                <span>
+                    Estudiante
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- ==========================================
+                 BANNER
+            =========================================== -->
+
+            <div class="banner-estudiante">
+
+
+                <div>
+
+                    <span class="banner-etiqueta">
+                        Proyectos APSTI
+                    </span>
+
+
+                    <h1>
+                        Proyectos
+                    </h1>
+
+
+                    <p>
+                        Conoce los proyectos desarrollados por
+                        estudiantes del programa APSTI y consulta
+                        referencias educativas publicadas por
+                        los docentes.
+                    </p>
+
+                </div>
+
+
+                <div class="banner-icono">
+                    💻
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 PESTAÑAS
+            =========================================== -->
+
+            <div class="pestanas-proyectos">
+
+
+                <button
+                    type="button"
+                    id="btnProyectosAPSTI"
+                    class="pestana-proyecto activa"
+                >
+
+                    🏆 Proyectos APSTI
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnReferenciasDocente"
+                    class="pestana-proyecto"
+                >
+
+                    💡 Referencias educativas
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 SECCIÓN PROYECTOS DEL ADMINISTRADOR
+            =========================================== -->
+
+            <div
+                id="seccionProyectosAPSTI"
+                class="seccion-proyectos-estudiante"
+            >
+
+
+                <div class="cabecera-consulta">
+
+
+                    <div>
+
+                        <h2>
+                            Proyectos APSTI
+                        </h2>
+
+                        <p>
+                            Consulta los proyectos registrados
+                            oficialmente en la plataforma.
+                        </p>
+
+                    </div>
+
+
+                    <div class="filtros-estudiante">
+
+
+                        <select id="filtroSemestreProyectoAdmin">
+
+                            <option value="Todos">
+                                Todos los semestres
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+
+                        <select id="filtroEstadoProyectoAdmin">
+
+                            <option value="Todos">
+                                Todos los estados
+                            </option>
+
+                            <option value="En desarrollo">
+                                En desarrollo
+                            </option>
+
+                            <option value="Finalizado">
+                                Finalizado
+                            </option>
+
+                        </select>
+
+
+                        <input
+                            type="search"
+                            id="buscarProyectoAdmin"
+                            placeholder="Buscar proyecto..."
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="resumen-consulta">
+
+                    <span>
+                        💻
+                    </span>
+
+                    <p>
+
+                        Se encontraron
+
+                        <strong id="cantidadProyectosAdmin">
+                            0
+                        </strong>
+
+                        proyectos.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    id="listaProyectosAdmin"
+                    class="grid-proyectos-estudiante"
+                >
+
+
+                    <div class="sin-resultados">
+
+                        <span>
+                            💻
+                        </span>
+
+                        <h3>
+                            No hay proyectos disponibles
+                        </h3>
+
+                        <p>
+                            Actualmente no existen proyectos
+                            registrados para mostrar.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 REFERENCIAS PUBLICADAS POR DOCENTES
+            =========================================== -->
+
+            <div
+                id="seccionReferenciasDocente"
+                class="seccion-proyectos-estudiante oculto"
+            >
+
+
+                <div class="cabecera-consulta">
+
+
+                    <div>
+
+                        <h2>
+                            Referencias educativas
+                        </h2>
+
+                        <p>
+                            Consulta ideas, referencias y recursos
+                            de proyectos publicados por los docentes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="filtros-estudiante">
+
+
+                        <select id="filtroSemestreReferencia">
+
+                            <option value="Todos">
+                                Todos los semestres
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+
+                        <select id="filtroTipoReferencia">
+
+                            <option value="Todos">
+                                Todos los tipos
+                            </option>
+
+                            <option value="Proyecto académico">
+                                Proyecto académico
+                            </option>
+
+                            <option value="Proyecto web">
+                                Proyecto web
+                            </option>
+
+                            <option value="Proyecto móvil">
+                                Proyecto móvil
+                            </option>
+
+                            <option value="Investigación">
+                                Investigación
+                            </option>
+
+                            <option value="Referencia">
+                                Referencia
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+
+                        <input
+                            type="search"
+                            id="buscarReferenciaDocente"
+                            placeholder="Buscar referencia..."
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="resumen-consulta">
+
+                    <span>
+                        💡
+                    </span>
+
+                    <p>
+
+                        Se encontraron
+
+                        <strong id="cantidadReferenciasDocente">
+                            0
+                        </strong>
+
+                        referencias educativas.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    id="listaReferenciasDocente"
+                    class="grid-consulta"
+                >
+
+
+                    <div class="sin-resultados">
+
+                        <span>
+                            💡
+                        </span>
+
+                        <h3>
+                            No hay referencias disponibles
+                        </h3>
+
+                        <p>
+                            Actualmente no existen referencias
+                            educativas publicadas para mostrar.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-estudiante">
+
+
+                <div>
+
+                    <h3>
+                        Proyectos educativos APSTI
+                    </h3>
+
+
+                    <p>
+                        Explora proyectos desarrollados en el
+                        programa y utiliza las referencias
+                        educativas como apoyo para tu formación.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-estudiante">
+
+
+                    <a
+                        href="estudiante.html"
+                        class="btn-principal"
+                    >
+                        🏠 Volver al panel
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<script src="../../js/estudiante/estudiante-proyectos.js"></script>
+
+
+</body>
+
+</html>

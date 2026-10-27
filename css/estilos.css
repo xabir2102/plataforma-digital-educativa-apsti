@@ -1,0 +1,957 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #17233c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 7%;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-contenedor h1 {
+    color: #0647a5;
+    font-size: 26px;
+}
+
+.logo-contenedor p {
+    color: #667085;
+    font-size: 12px;
+}
+
+
+/* MENÚ */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #27364d;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #0878d1;
+}
+
+
+/* BOTÓN MENÚ */
+
+.menu-btn {
+    display: none;
+
+    background: #0878d1;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 22px;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(135deg, #eaf5ff, #ffffff);
+}
+
+
+.hero-contenido {
+    width: 50%;
+}
+
+.etiqueta {
+    display: inline-block;
+
+    background: #d9efff;
+    color: #0566b3;
+
+    padding: 7px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+    color: #12264a;
+}
+
+.hero h2 span {
+    color: #0878d1;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #596780;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-principal,
+.btn-secundario {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background: #0878d1;
+    color: white;
+}
+
+.btn-principal:hover {
+    background: #055da3;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    border: 2px solid #0878d1;
+    color: #0878d1;
+    background: white;
+}
+
+.btn-secundario:hover {
+    background: #0878d1;
+    color: white;
+}
+
+
+/* IMAGEN */
+
+.hero-imagen {
+    width: 43%;
+    text-align: center;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.seccion {
+    padding: 80px 8%;
+}
+
+.titulo {
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+.titulo span {
+    color: #0878d1;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo h2 {
+    font-size: 35px;
+
+    margin: 10px 0;
+}
+
+.titulo strong {
+    color: #0878d1;
+}
+
+.titulo p {
+    color: #667085;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(30, 60, 90, 0.08);
+
+    border: 1px solid #e7edf5;
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(30, 60, 90, 0.14);
+}
+
+.icono {
+    width: 60px;
+    height: 60px;
+
+    background: #e8f5ff;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #667085;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.tarjeta a {
+    color: #0878d1;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DESTACADO
+========================================= */
+
+.destacado {
+    margin: 20px 8% 80px;
+
+    padding: 70px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(135deg, #063b82, #0878d1);
+
+    color: white;
+}
+
+.destacado div {
+    max-width: 700px;
+}
+
+.destacado span {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+.destacado h2 {
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    margin: 15px 0;
+}
+
+.destacado p {
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+
+.destacado .btn-principal {
+    background: white;
+    color: #0667b5;
+}
+
+
+/* =========================================
+   PÁGINAS INTERNAS
+========================================= */
+
+.banner-pagina {
+    background:
+        linear-gradient(135deg, #063b82, #0878d1);
+
+    color: white;
+
+    padding: 70px 8%;
+
+    text-align: center;
+}
+
+.banner-pagina h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner-pagina p {
+    opacity: 0.9;
+}
+
+
+.contenido-pagina {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 25px;
+}
+
+.contenido-pagina h2 {
+    color: #0647a5;
+
+    margin-bottom: 15px;
+}
+
+.contenido-pagina p {
+    color: #5d687a;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.lista {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.lista li {
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #0878d1;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   CURSOS
+========================================= */
+
+.cursos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.curso {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    border: 1px solid #e3eaf2;
+
+    transition: 0.3s;
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+}
+
+.curso h3 {
+    color: #0647a5;
+
+    margin-bottom: 10px;
+}
+
+.curso span {
+    display: inline-block;
+
+    background: #e8f5ff;
+
+    color: #0878d1;
+
+    padding: 5px 10px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   DOCENTES
+========================================= */
+
+.docentes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.docente {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.docente img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+}
+
+.docente h3 {
+    color: #0647a5;
+}
+
+.docente p {
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.formulario {
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.07);
+}
+
+.formulario label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d8e0ea;
+
+    border-radius: 7px;
+
+    margin-bottom: 20px;
+
+    font-family: Arial;
+}
+
+.formulario textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.formulario button {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #10233f;
+
+    color: white;
+
+    padding-top: 50px;
+}
+
+.footer-contenido {
+    padding: 0 8% 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.footer-contenido h3 {
+    margin-bottom: 15px;
+}
+
+.footer-contenido p {
+    color: #b7c2d2;
+
+    font-size: 14px;
+}
+
+.footer-contenido a {
+    display: block;
+
+    color: #b7c2d2;
+
+    margin-bottom: 7px;
+}
+
+.footer-contenido a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #29405f;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.copyright p {
+    color: #aab8ca;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    .tarjetas {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cursos,
+    .docentes {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+        padding: 10px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    nav.mostrar {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        padding: 50px 6%;
+
+        text-align: center;
+    }
+
+    .hero-contenido,
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero-imagen {
+        margin-top: 40px;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+
+    .tarjetas,
+    .cursos,
+    .docentes,
+    .lista,
+    .footer-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .destacado {
+        margin: 20px 5% 50px;
+
+        padding: 40px 25px;
+    }
+
+    .destacado h2 {
+        font-size: 28px;
+    }
+/* =========================================
+   LOGIN ESTUDIANTE
+========================================= */
+
+.login-contenedor {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(135deg, #eaf5ff, #ffffff);
+}
+
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(30, 60, 90, 0.12);
+
+    text-align: center;
+}
+
+
+.login-icono {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    background: #e8f5ff;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+.login-card h2 {
+    color: #0647a5;
+
+    margin-bottom: 5px;
+
+    font-size: 28px;
+}
+
+
+.login-subtitulo {
+    color: #667085;
+
+    margin-bottom: 30px;
+}
+
+
+.login-card form {
+    text-align: left;
+}
+
+
+.login-card label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #17233c;
+}
+
+
+.login-card input {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #d8e0ea;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.login-card input:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 120, 209, 0.10);
+}
+
+
+.login-btn {
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.mensaje-login {
+    margin-top: 20px;
+
+    font-weight: bold;
+}
+
+
+.mensaje-login.correcto {
+    color: #16803c;
+}
+
+
+.mensaje-login.error {
+    color: #d62828;
+}
+
+
+.volver {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #0878d1;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+/* BOTÓN LOGIN DEL MENÚ */
+
+.btn-login {
+    background: #0878d1;
+
+    color: white !important;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background: #055da3;
+
+    color: white !important;
+}
+}

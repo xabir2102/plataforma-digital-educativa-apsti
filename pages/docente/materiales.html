@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Material Educativo - APSTI</title>
+
+    <!-- CSS DEL DOCENTE -->
+    <link
+        rel="stylesheet"
+        href="../../css/docente.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="docente-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <!-- INICIO -->
+
+            <a href="docente.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <!-- ACTIVIDADES -->
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <!-- MATERIAL EDUCATIVO -->
+
+            <a
+                href="materiales.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📖
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <!-- AVISOS -->
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <!-- PROYECTOS -->
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="docente-main">
+
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Material educativo
+            </h2>
+
+
+            <div class="usuario">
+
+                👨‍🏫
+
+                <span>
+                    Docente
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- BANNER -->
+
+            <div class="banner-docente">
+
+
+                <h1>
+                    Material Educativo
+                </h1>
+
+
+                <p>
+                    Publica y administra recursos educativos
+                    que ayuden a complementar el aprendizaje
+                    de los estudiantes del programa APSTI.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 FORMULARIO
+            =========================================== -->
+
+            <form
+                id="formMaterial"
+                class="formulario-docente"
+            >
+
+
+                <div class="titulo-formulario">
+
+                    <h2>
+                        Publicar material
+                    </h2>
+
+                    <p>
+                        Registra documentos, videos, tutoriales,
+                        guías o enlaces educativos para que los
+                        estudiantes puedan consultarlos.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     CAMPOS
+                =========================================== -->
+
+                <div class="campos-formulario">
+
+
+                    <!-- TÍTULO -->
+
+                    <div class="campo">
+
+                        <label for="tituloMaterial">
+                            Título del material
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tituloMaterial"
+                            name="tituloMaterial"
+                            placeholder="Ejemplo: Introducción a HTML"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEMESTRE -->
+
+                    <div class="campo">
+
+                        <label for="semestreMaterial">
+                            Semestre
+                        </label>
+
+                        <select
+                            id="semestreMaterial"
+                            name="semestreMaterial"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="I">I Semestre</option>
+                            <option value="II">II Semestre</option>
+                            <option value="III">III Semestre</option>
+                            <option value="IV">IV Semestre</option>
+                            <option value="V">V Semestre</option>
+                            <option value="VI">VI Semestre</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- CURSO -->
+
+                    <div class="campo">
+
+                        <label for="cursoMaterial">
+                            Curso
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cursoMaterial"
+                            name="cursoMaterial"
+                            placeholder="Ejemplo: Taller de Programación Web"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIPO -->
+
+                    <div class="campo">
+
+                        <label for="tipoMaterial">
+                            Tipo de material
+                        </label>
+
+                        <select
+                            id="tipoMaterial"
+                            name="tipoMaterial"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Documento">
+                                Documento
+                            </option>
+
+                            <option value="Guía">
+                                Guía
+                            </option>
+
+                            <option value="Video">
+                                Video
+                            </option>
+
+                            <option value="Tutorial">
+                                Tutorial
+                            </option>
+
+                            <option value="Presentación">
+                                Presentación
+                            </option>
+
+                            <option value="Sitio web">
+                                Sitio web
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ENLACE -->
+
+                    <div class="campo">
+
+                        <label for="enlaceMaterial">
+                            Enlace del recurso
+                        </label>
+
+                        <input
+                            type="url"
+                            id="enlaceMaterial"
+                            name="enlaceMaterial"
+                            placeholder="https://..."
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- FECHA -->
+
+                    <div class="campo">
+
+                        <label for="fechaMaterial">
+                            Fecha de publicación
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaMaterial"
+                            name="fechaMaterial"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estadoMaterial">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estadoMaterial"
+                            name="estadoMaterial"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Publicado">
+                                Publicado
+                            </option>
+
+                            <option value="Borrador">
+                                Borrador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     DESCRIPCIÓN
+                =========================================== -->
+
+                <div class="campo campo-descripcion">
+
+                    <label for="descripcionMaterial">
+                        Descripción del material
+                    </label>
+
+                    <textarea
+                        id="descripcionMaterial"
+                        name="descripcionMaterial"
+                        placeholder="Describe brevemente el contenido o utilidad de este material..."
+                        maxlength="500"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- NOTA -->
+
+                <div class="nota-docente">
+
+                    <span>
+                        ℹ️
+                    </span>
+
+                    <p>
+                        Los materiales publicados estarán destinados
+                        a la consulta de los estudiantes. Pueden ser
+                        documentos, videos, tutoriales, presentaciones
+                        o enlaces a recursos educativos.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     BOTONES
+                =========================================== -->
+
+                <div class="acciones-formulario">
+
+
+                    <button
+                        type="submit"
+                        class="btn-guardar"
+                    >
+                        💾 Publicar material
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn-limpiar"
+                    >
+                        🧹 Limpiar
+                    </button>
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-volver"
+                    >
+                        ← Volver al panel
+                    </a>
+
+
+                </div>
+
+
+            </form>
+
+
+
+            <!-- ==========================================
+                 MATERIALES PUBLICADOS
+            =========================================== -->
+
+            <div class="lista-docente">
+
+
+                <div class="encabezado-lista">
+
+
+                    <div>
+
+                        <h2>
+                            Materiales publicados
+                        </h2>
+
+                        <p>
+                            Consulta y administra los recursos
+                            educativos registrados.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- FILTROS -->
+
+                    <div class="controles-docente">
+
+
+                        <select id="filtroSemestreMaterial">
+
+                            <option value="Todos">
+                                Todos los semestres
+                            </option>
+
+                            <option value="I">I Semestre</option>
+                            <option value="II">II Semestre</option>
+                            <option value="III">III Semestre</option>
+                            <option value="IV">IV Semestre</option>
+                            <option value="V">V Semestre</option>
+                            <option value="VI">VI Semestre</option>
+
+                        </select>
+
+
+                        <input
+                            type="search"
+                            id="buscarMaterial"
+                            placeholder="Buscar material..."
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     TABLA
+                =========================================== -->
+
+                <div class="tabla-contenedor">
+
+
+                    <table class="tabla-docente">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Material
+                                </th>
+
+                                <th>
+                                    Curso
+                                </th>
+
+                                <th>
+                                    Semestre
+                                </th>
+
+                                <th>
+                                    Tipo
+                                </th>
+
+                                <th>
+                                    Fecha
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Recurso
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody id="tablaMateriales">
+
+
+                            <tr>
+
+                                <td
+                                    colspan="8"
+                                    class="sin-registros"
+                                >
+                                    No hay materiales publicados
+                                    actualmente.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-docente">
+
+
+                <div>
+
+                    <h3>
+                        Recursos educativos
+                    </h3>
+
+                    <p>
+                        Comparte materiales de consulta que
+                        complementen la información académica
+                        disponible para los estudiantes.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-docente">
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-inicio"
+                    >
+                        🏠 Panel del docente
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script src="../../js/docente/docente-materiales.js"></script>
+
+
+</body>
+
+</html>

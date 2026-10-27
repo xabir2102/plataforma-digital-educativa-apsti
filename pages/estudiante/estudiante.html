@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Panel del Estudiante - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/estudiante.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="estudiante-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a
+                href="estudiante.html"
+                class="activo"
+            >
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+            </a>
+
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="estudiante-main">
+
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+
+            <div>
+
+                <h2>
+                    Panel del Estudiante
+                </h2>
+
+            </div>
+
+
+            <div class="usuario">
+
+                🎓
+
+                <span>
+                    Estudiante
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- ==========================================
+                 BANNER
+            =========================================== -->
+
+            <div class="banner-estudiante">
+
+
+                <div>
+
+                    <span class="banner-etiqueta">
+                        Plataforma Educativa APSTI
+                    </span>
+
+
+                    <h1>
+                        Bienvenido, Estudiante
+                    </h1>
+
+
+                    <p>
+                        Consulta actividades, materiales educativos,
+                        avisos y proyectos disponibles para los
+                        estudiantes del programa APSTI.
+                    </p>
+
+                </div>
+
+
+                <div class="banner-icono">
+                    🎓
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 TARJETAS PRINCIPALES
+            =========================================== -->
+
+            <div class="titulo-seccion">
+
+                <div>
+
+                    <h2>
+                        Información académica
+                    </h2>
+
+                    <p>
+                        Accede rápidamente a la información publicada
+                        en la plataforma.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="tarjetas-estudiante">
+
+
+                <!-- ACTIVIDADES -->
+
+                <article class="tarjeta-estudiante">
+
+
+                    <div class="tarjeta-icono">
+                        📝
+                    </div>
+
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            Actividades
+                        </h3>
+
+
+                        <p>
+                            Consulta las actividades e indicaciones
+                            publicadas por tus docentes.
+                        </p>
+
+
+                        <div class="tarjeta-inferior">
+
+                            <span class="contador">
+
+                                <strong id="contadorActividades">
+                                    0
+                                </strong>
+
+                                publicadas
+
+                            </span>
+
+
+                            <a
+                                href="actividades.html"
+                                class="btn-ver"
+                            >
+                                Ver actividades →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- MATERIAL EDUCATIVO -->
+
+                <article class="tarjeta-estudiante">
+
+
+                    <div class="tarjeta-icono">
+                        📚
+                    </div>
+
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            Material educativo
+                        </h3>
+
+
+                        <p>
+                            Accede a documentos, guías, videos,
+                            tutoriales y otros recursos educativos.
+                        </p>
+
+
+                        <div class="tarjeta-inferior">
+
+                            <span class="contador">
+
+                                <strong id="contadorMateriales">
+                                    0
+                                </strong>
+
+                                recursos
+
+                            </span>
+
+
+                            <a
+                                href="materiales.html"
+                                class="btn-ver"
+                            >
+                                Ver materiales →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- AVISOS -->
+
+                <article class="tarjeta-estudiante">
+
+
+                    <div class="tarjeta-icono">
+                        📢
+                    </div>
+
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            Avisos
+                        </h3>
+
+
+                        <p>
+                            Mantente informado sobre comunicados,
+                            recordatorios y novedades académicas.
+                        </p>
+
+
+                        <div class="tarjeta-inferior">
+
+                            <span class="contador">
+
+                                <strong id="contadorAvisos">
+                                    0
+                                </strong>
+
+                                avisos
+
+                            </span>
+
+
+                            <a
+                                href="avisos.html"
+                                class="btn-ver"
+                            >
+                                Ver avisos →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PROYECTOS -->
+
+                <article class="tarjeta-estudiante">
+
+
+                    <div class="tarjeta-icono">
+                        💻
+                    </div>
+
+
+                    <div class="tarjeta-contenido">
+
+                        <h3>
+                            Proyectos
+                        </h3>
+
+
+                        <p>
+                            Conoce proyectos APSTI y referencias
+                            educativas publicadas en la plataforma.
+                        </p>
+
+
+                        <div class="tarjeta-inferior">
+
+                            <span class="contador">
+
+                                <strong id="contadorProyectos">
+                                    0
+                                </strong>
+
+                                proyectos
+
+                            </span>
+
+
+                            <a
+                                href="proyectos.html"
+                                class="btn-ver"
+                            >
+                                Ver proyectos →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 NOVEDADES
+            =========================================== -->
+
+            <div class="seccion-novedades">
+
+
+                <!-- AVISOS RECIENTES -->
+
+                <div class="panel-novedades">
+
+
+                    <div class="panel-titulo">
+
+
+                        <div>
+
+                            <h2>
+                                📢 Avisos recientes
+                            </h2>
+
+                            <p>
+                                Últimos comunicados publicados.
+                            </p>
+
+                        </div>
+
+
+                        <a href="avisos.html">
+                            Ver todos →
+                        </a>
+
+
+                    </div>
+
+
+                    <div
+                        id="avisosRecientes"
+                        class="lista-novedades"
+                    >
+
+
+                        <div class="sin-informacion">
+
+                            <span>
+                                📭
+                            </span>
+
+                            <p>
+                                No hay avisos publicados actualmente.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ACTIVIDADES RECIENTES -->
+
+                <div class="panel-novedades">
+
+
+                    <div class="panel-titulo">
+
+
+                        <div>
+
+                            <h2>
+                                📝 Actividades recientes
+                            </h2>
+
+                            <p>
+                                Últimas actividades publicadas.
+                            </p>
+
+                        </div>
+
+
+                        <a href="actividades.html">
+                            Ver todas →
+                        </a>
+
+
+                    </div>
+
+
+                    <div
+                        id="actividadesRecientes"
+                        class="lista-novedades"
+                    >
+
+
+                        <div class="sin-informacion">
+
+                            <span>
+                                📝
+                            </span>
+
+                            <p>
+                                No hay actividades publicadas actualmente.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-estudiante">
+
+
+                <div>
+
+                    <h3>
+                        Plataforma Digital Educativa APSTI
+                    </h3>
+
+
+                    <p>
+                        Consulta la información y los recursos
+                        educativos disponibles para apoyar tu
+                        formación académica.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-estudiante">
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-principal"
+                    >
+                        🌐 Página principal
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/estudiante/estudiante-inicio.js"></script>
+
+
+</body>
+
+</html>

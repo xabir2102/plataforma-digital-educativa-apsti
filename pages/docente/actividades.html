@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gestión de Actividades - APSTI</title>
+
+    <!-- CSS DEL DOCENTE -->
+    <link
+        rel="stylesheet"
+        href="../../css/docente.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="docente-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <!-- INICIO -->
+
+            <a href="docente.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <!-- ACTIVIDADES -->
+
+            <a
+                href="actividades.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <!-- MATERIAL EDUCATIVO -->
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📖
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <!-- AVISOS -->
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <!-- PROYECTOS -->
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="docente-main">
+
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Gestión de actividades
+            </h2>
+
+
+            <div class="usuario">
+
+                👨‍🏫
+
+                <span>
+                    Docente
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- BANNER -->
+
+            <div class="banner-docente">
+
+
+                <h1>
+                    Gestión de Actividades
+                </h1>
+
+
+                <p>
+                    Publica y administra actividades informativas
+                    para los estudiantes del programa APSTI.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 FORMULARIO
+            =========================================== -->
+
+            <form
+                id="formActividad"
+                class="formulario-docente"
+            >
+
+
+                <div class="titulo-formulario">
+
+                    <h2>
+                        Publicar actividad
+                    </h2>
+
+                    <p>
+                        Completa la información de la actividad
+                        que deseas compartir con los estudiantes.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CAMPOS PRINCIPALES -->
+
+                <div class="campos-formulario">
+
+
+                    <!-- TÍTULO -->
+
+                    <div class="campo">
+
+                        <label for="tituloActividad">
+                            Título de la actividad
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tituloActividad"
+                            name="tituloActividad"
+                            placeholder="Ejemplo: Desarrollo de formulario web"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEMESTRE -->
+
+                    <div class="campo">
+
+                        <label for="semestreActividad">
+                            Semestre
+                        </label>
+
+                        <select
+                            id="semestreActividad"
+                            name="semestreActividad"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="I">I Semestre</option>
+                            <option value="II">II Semestre</option>
+                            <option value="III">III Semestre</option>
+                            <option value="IV">IV Semestre</option>
+                            <option value="V">V Semestre</option>
+                            <option value="VI">VI Semestre</option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- CURSO -->
+
+                    <div class="campo">
+
+                        <label for="cursoActividad">
+                            Curso
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cursoActividad"
+                            name="cursoActividad"
+                            placeholder="Ejemplo: Taller de Programación Web"
+                            maxlength="80"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIPO -->
+
+                    <div class="campo">
+
+                        <label for="tipoActividad">
+                            Tipo de actividad
+                        </label>
+
+                        <select
+                            id="tipoActividad"
+                            name="tipoActividad"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Práctica">
+                                Práctica
+                            </option>
+
+                            <option value="Investigación">
+                                Investigación
+                            </option>
+
+                            <option value="Lectura">
+                                Lectura
+                            </option>
+
+                            <option value="Proyecto">
+                                Proyecto
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- FECHA -->
+
+                    <div class="campo">
+
+                        <label for="fechaActividad">
+                            Fecha
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaActividad"
+                            name="fechaActividad"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estadoActividad">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estadoActividad"
+                            name="estadoActividad"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Publicado">
+                                Publicado
+                            </option>
+
+                            <option value="Borrador">
+                                Borrador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ENLACE -->
+
+                    <div class="campo">
+
+                        <label for="enlaceActividad">
+                            Enlace de recurso
+                        </label>
+
+                        <input
+                            type="url"
+                            id="enlaceActividad"
+                            name="enlaceActividad"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="campo campo-descripcion">
+
+                    <label for="descripcionActividad">
+                        Descripción / indicaciones
+                    </label>
+
+                    <textarea
+                        id="descripcionActividad"
+                        name="descripcionActividad"
+                        placeholder="Escribe las indicaciones de la actividad..."
+                        maxlength="500"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- NOTA -->
+
+                <div class="nota-docente">
+
+                    <span>
+                        ℹ️
+                    </span>
+
+                    <p>
+                        Esta actividad tiene carácter informativo.
+                        Los estudiantes podrán consultar las
+                        indicaciones y recursos publicados desde
+                        su panel.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-formulario">
+
+
+                    <button
+                        type="submit"
+                        class="btn-guardar"
+                    >
+                        💾 Publicar actividad
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn-limpiar"
+                    >
+                        🧹 Limpiar
+                    </button>
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-volver"
+                    >
+                        ← Volver al panel
+                    </a>
+
+
+                </div>
+
+
+            </form>
+
+
+
+            <!-- ==========================================
+                 ACTIVIDADES PUBLICADAS
+            =========================================== -->
+
+            <div class="lista-docente">
+
+
+                <div class="encabezado-lista">
+
+
+                    <div>
+
+                        <h2>
+                            Actividades publicadas
+                        </h2>
+
+                        <p>
+                            Consulta y administra las actividades
+                            registradas.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- FILTROS -->
+
+                    <div class="controles-docente">
+
+
+                        <select id="filtroSemestreActividad">
+
+                            <option value="Todos">
+                                Todos los semestres
+                            </option>
+
+                            <option value="I">I Semestre</option>
+                            <option value="II">II Semestre</option>
+                            <option value="III">III Semestre</option>
+                            <option value="IV">IV Semestre</option>
+                            <option value="V">V Semestre</option>
+                            <option value="VI">VI Semestre</option>
+
+                        </select>
+
+
+                        <input
+                            type="search"
+                            id="buscarActividad"
+                            placeholder="Buscar actividad..."
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TABLA -->
+
+                <div class="tabla-contenedor">
+
+
+                    <table class="tabla-docente">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Actividad</th>
+
+                                <th>Curso</th>
+
+                                <th>Semestre</th>
+
+                                <th>Tipo</th>
+
+                                <th>Fecha</th>
+
+                                <th>Estado</th>
+
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody id="tablaActividades">
+
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="sin-registros"
+                                >
+                                    No hay actividades publicadas
+                                    actualmente.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-docente">
+
+
+                <div>
+
+                    <h3>
+                        Actividades educativas
+                    </h3>
+
+                    <p>
+                        Comparte indicaciones y recursos académicos
+                        para que los estudiantes puedan consultarlos.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-docente">
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-inicio"
+                    >
+                        🏠 Panel del docente
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     JAVASCRIPT
+=========================================== -->
+
+<script src="../../js/docente/docente-actividades.js"></script>
+
+
+</body>
+
+</html>

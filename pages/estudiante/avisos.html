@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Avisos - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/estudiante.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="estudiante-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="estudiante.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a
+                href="avisos.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="estudiante-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Avisos
+            </h2>
+
+
+            <div class="usuario">
+
+                🎓
+
+                <span>
+                    Estudiante
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- ==========================================
+                 BANNER
+            =========================================== -->
+
+            <div class="banner-estudiante">
+
+
+                <div>
+
+                    <span class="banner-etiqueta">
+                        Comunicados académicos
+                    </span>
+
+
+                    <h1>
+                        Avisos
+                    </h1>
+
+
+                    <p>
+                        Mantente informado sobre comunicados,
+                        recordatorios, eventos y novedades
+                        publicados por tus docentes.
+                    </p>
+
+                </div>
+
+
+                <div class="banner-icono">
+                    📢
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 ENCABEZADO Y FILTROS
+            =========================================== -->
+
+            <div class="cabecera-consulta">
+
+
+                <div>
+
+                    <h2>
+                        Avisos publicados
+                    </h2>
+
+                    <p>
+                        Consulta los comunicados disponibles
+                        para los estudiantes.
+                    </p>
+
+                </div>
+
+
+                <div class="filtros-estudiante">
+
+
+                    <!-- SEMESTRE -->
+
+                    <select id="filtroSemestreAvisoEstudiante">
+
+                        <option value="Todos">
+                            Todos los avisos
+                        </option>
+
+                        <option value="I">
+                            I Semestre
+                        </option>
+
+                        <option value="II">
+                            II Semestre
+                        </option>
+
+                        <option value="III">
+                            III Semestre
+                        </option>
+
+                        <option value="IV">
+                            IV Semestre
+                        </option>
+
+                        <option value="V">
+                            V Semestre
+                        </option>
+
+                        <option value="VI">
+                            VI Semestre
+                        </option>
+
+                    </select>
+
+
+                    <!-- PRIORIDAD -->
+
+                    <select id="filtroPrioridadAviso">
+
+                        <option value="Todas">
+                            Todas las prioridades
+                        </option>
+
+                        <option value="Normal">
+                            Normal
+                        </option>
+
+                        <option value="Importante">
+                            Importante
+                        </option>
+
+                        <option value="Urgente">
+                            Urgente
+                        </option>
+
+                    </select>
+
+
+                    <!-- BUSCADOR -->
+
+                    <input
+                        type="search"
+                        id="buscarAvisoEstudiante"
+                        placeholder="Buscar aviso..."
+                    >
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 CONTADOR
+            =========================================== -->
+
+            <div class="resumen-consulta">
+
+                <span>
+                    📢
+                </span>
+
+
+                <p>
+
+                    Se encontraron
+
+                    <strong id="cantidadAvisos">
+                        0
+                    </strong>
+
+                    avisos publicados.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 LISTADO DE AVISOS
+            =========================================== -->
+
+            <div
+                id="listaAvisosEstudiante"
+                class="lista-avisos-estudiante"
+            >
+
+
+                <div class="sin-resultados">
+
+                    <span>
+                        📭
+                    </span>
+
+                    <h3>
+                        No hay avisos disponibles
+                    </h3>
+
+                    <p>
+                        Actualmente no existen avisos
+                        publicados para mostrar.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-estudiante">
+
+
+                <div>
+
+                    <h3>
+                        Comunicados APSTI
+                    </h3>
+
+
+                    <p>
+                        Revisa periódicamente los avisos para
+                        mantenerte informado sobre las novedades
+                        académicas publicadas en la plataforma.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-estudiante">
+
+
+                    <a
+                        href="estudiante.html"
+                        class="btn-principal"
+                    >
+                        🏠 Volver al panel
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/estudiante/estudiante-avisos.js"></script>
+
+
+</body>
+
+</html>

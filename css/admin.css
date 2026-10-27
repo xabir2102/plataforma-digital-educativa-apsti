@@ -1,0 +1,1486 @@
+/* ==============================
+   PANEL ADMINISTRADOR APSTI
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fc;
+    color: #162d52;
+}
+
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+   ============================== */
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   MENU LATERAL
+   ============================== */
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(180deg, #12386b, #09264d);
+    color: white;
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/* LOGO DEL MENU */
+
+.sidebar-logo {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-logo h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.sidebar-logo p {
+    font-size: 13px;
+    color: #cbd9ec;
+}
+
+
+/* MENU */
+
+.menu {
+    margin-top: 25px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 14px 16px;
+
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #176dcc;
+}
+
+.menu a.activo {
+    background: #1976d2;
+}
+
+.menu-icono {
+    font-size: 22px;
+}
+
+
+/* FRASE DEL MENU */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    text-align: center;
+
+    padding: 20px 5px;
+}
+
+.sidebar-footer strong {
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.sidebar-footer p {
+    font-size: 12px;
+
+    color: #cbd9ec;
+
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   CONTENIDO
+   ============================== */
+
+.admin-main {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   BARRA SUPERIOR
+   ============================== */
+
+.topbar {
+    height: 75px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.topbar h2 {
+    color: #12386b;
+
+    font-size: 22px;
+}
+
+.usuario {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-weight: bold;
+
+    color: #26364d;
+}
+
+
+/* ==============================
+   CONTENIDO INTERNO
+   ============================== */
+
+.contenido {
+    padding: 35px;
+}
+
+
+/* ==============================
+   BANNER DE BIENVENIDA
+   ============================== */
+
+.banner-admin {
+    background: linear-gradient(
+        120deg,
+        #0759a5,
+        #148bd1
+    );
+
+    color: white;
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.banner-admin h1 {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.banner-admin p {
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    max-width: 700px;
+}
+
+
+/* ==============================
+   TITULOS
+   ============================== */
+
+.titulo-seccion {
+    margin-bottom: 20px;
+}
+
+.titulo-seccion h2 {
+    font-size: 28px;
+
+    color: #12386b;
+}
+
+.titulo-seccion p {
+    margin-top: 6px;
+
+    color: #6b7788;
+}
+
+
+/* ==============================
+   TARJETAS
+   ============================== */
+
+.tarjetas-admin {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* TARJETA */
+
+.tarjeta-admin {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e1e8f0;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+.tarjeta-admin:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12);
+}
+
+
+/* ICONO */
+
+.icono-admin {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #e8f3ff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    margin-bottom: 18px;
+}
+
+.tarjeta-admin h3 {
+    color: #12386b;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+.tarjeta-admin p {
+    color: #66758a;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* BOTON DE TARJETA */
+
+.btn-admin {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #0878d1;
+
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-admin:hover {
+    background: #0565b3;
+}
+
+
+/* ==============================
+   SECCION INFERIOR
+   ============================== */
+
+.info-admin {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border: 1px solid #e1e8f0;
+}
+
+.info-admin h3 {
+    color: #12386b;
+
+    margin-bottom: 8px;
+}
+
+.info-admin p {
+    color: #68778a;
+
+    line-height: 1.5;
+}
+
+
+/* BOTONES */
+
+.botones-admin {
+    display: flex;
+
+    gap: 10px;
+}
+
+.btn-inicio {
+    text-decoration: none;
+
+    border: 2px solid #0878d1;
+
+    color: #0878d1;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.btn-salir {
+    text-decoration: none;
+
+    background: #e94b5f;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 1000px) {
+
+    .tarjetas-admin {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .admin-main {
+        margin-left: 200px;
+
+        width: calc(100% - 200px);
+    }
+
+    .tarjetas-admin {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+
+    .info-admin {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ==========================================================
+   FORMULARIOS DEL PANEL ADMINISTRADOR
+   ========================================================== */
+
+
+/* ==============================
+   CONTENEDOR DEL FORMULARIO
+   ============================== */
+
+.formulario-admin {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e1e8f0;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.06);
+
+    margin-bottom: 30px;
+}
+
+
+/* TITULO DEL FORMULARIO */
+
+.titulo-formulario {
+    margin-bottom: 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #e1e8f0;
+}
+
+.titulo-formulario h2 {
+    color: #12386b;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+.titulo-formulario p {
+    color: #6b7788;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CAMPOS DEL FORMULARIO
+   ============================== */
+
+.campos-formulario {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* CADA CAMPO */
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.campo label {
+    color: #263f61;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUT Y SELECT */
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 13px;
+
+    border: 1px solid #ccd7e2;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #26364d;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* PLACEHOLDER */
+
+.campo input::placeholder {
+    color: #9aa7b5;
+}
+
+
+/* CUANDO EL USUARIO SELECCIONA
+   UN CAMPO */
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8,120,209,0.10);
+}
+
+
+/* ==============================
+   BOTONES DEL FORMULARIO
+   ============================== */
+
+.acciones-formulario {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e1e8f0;
+}
+
+
+/* BOTON REGISTRAR */
+
+.btn-guardar {
+    border: none;
+
+    background: #0878d1;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-guardar:hover {
+    background: #0565b3;
+}
+
+
+/* BOTON LIMPIAR */
+
+.btn-limpiar {
+    border: none;
+
+    background: #e9eff5;
+
+    color: #344b67;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-limpiar:hover {
+    background: #dbe5ee;
+}
+
+
+/* BOTON VOLVER */
+
+.btn-volver {
+    text-decoration: none;
+
+    border: 2px solid #0878d1;
+
+    color: #0878d1;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background: #eef7ff;
+}
+
+
+/* ==========================================================
+   LISTADO DE ESTUDIANTES
+   ========================================================== */
+
+.lista-estudiantes {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e1e8f0;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.06);
+}
+
+
+/* ==============================
+   CABECERA DEL LISTADO
+   ============================== */
+
+.encabezado-lista {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.encabezado-lista h2 {
+    color: #12386b;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+.encabezado-lista p {
+    color: #6b7788;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   BUSCADOR
+   ============================== */
+
+.contenedor-busqueda {
+    width: 300px;
+}
+
+.contenedor-busqueda input {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ccd7e2;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.contenedor-busqueda input:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8,120,209,0.10);
+}
+
+
+/* ==========================================================
+   TABLA DE ESTUDIANTES
+   ========================================================== */
+
+.tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e8f0;
+}
+
+
+.tabla-estudiantes {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 950px;
+}
+
+
+/* ENCABEZADO DE LA TABLA */
+
+.tabla-estudiantes thead {
+    background: #12386b;
+
+    color: white;
+}
+
+.tabla-estudiantes th {
+    padding: 14px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+/* CELDAS */
+
+.tabla-estudiantes td {
+    padding: 14px;
+
+    border-bottom: 1px solid #e6ecf2;
+
+    color: #4c5e72;
+
+    font-size: 13px;
+}
+
+
+/* FILAS */
+
+.tabla-estudiantes tbody tr {
+    transition: 0.2s;
+}
+
+.tabla-estudiantes tbody tr:hover {
+    background: #f5f9fd;
+}
+
+
+/* ULTIMA FILA */
+
+.tabla-estudiantes tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   MENSAJE SIN REGISTROS
+   ============================== */
+
+.sin-registros {
+    text-align: center !important;
+
+    padding: 35px !important;
+
+    color: #8290a0 !important;
+
+    font-style: italic;
+}
+
+
+/* ==========================================================
+   BOTONES EDITAR Y ELIMINAR
+   Los utilizaremos con JavaScript
+   ========================================================== */
+
+.btn-editar,
+.btn-eliminar {
+    border: none;
+
+    padding: 7px 11px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* EDITAR */
+
+.btn-editar {
+    background: #e4f2ff;
+
+    color: #0878d1;
+
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background: #cfe7fb;
+}
+
+
+/* ELIMINAR */
+
+.btn-eliminar {
+    background: #ffe8eb;
+
+    color: #d83c50;
+}
+
+.btn-eliminar:hover {
+    background: #ffd2d8;
+}
+
+
+/* ==========================================================
+   ESTADO DEL ESTUDIANTE
+   ========================================================== */
+
+.estado-activo {
+    display: inline-block;
+
+    background: #e5f7ec;
+
+    color: #168447;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.estado-inactivo {
+    display: inline-block;
+
+    background: #ffe8eb;
+
+    color: #d83c50;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================================
+   RESPONSIVE DEL FORMULARIO
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+    .campos-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-lista {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contenedor-busqueda {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .formulario-admin,
+    .lista-estudiantes {
+        padding: 20px;
+    }
+
+    .acciones-formulario {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn-guardar,
+    .btn-limpiar,
+    .btn-volver {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ==========================================================
+   AJUSTE FINAL - GESTIÓN DE ESTUDIANTES
+   Aprovechar mejor el tamaño de pantalla
+   ========================================================== */
+
+
+/* FORMULARIO MÁS COMPACTO */
+
+.formulario-admin {
+    padding: 24px;
+    margin-bottom: 25px;
+}
+
+
+/* CAMPOS PRINCIPALES EN 4 COLUMNAS
+   CUANDO HAY ESPACIO SUFICIENTE */
+
+.campos-formulario {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 18px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    min-width: 0;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+
+/* INPUTS Y SELECTS MÁS COMPACTOS */
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   CREDENCIALES
+   ========================================================== */
+
+.seccion-credenciales {
+    margin-top: 22px;
+    padding: 20px;
+}
+
+
+/* CABECERA DE CREDENCIALES */
+
+.titulo-credenciales {
+    margin-bottom: 16px;
+}
+
+.icono-credenciales {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+}
+
+.titulo-credenciales h3 {
+    font-size: 18px;
+}
+
+.titulo-credenciales p {
+    font-size: 13px;
+}
+
+
+/* LAS 3 CREDENCIALES EN UNA SOLA FILA */
+
+.campos-credenciales {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 18px;
+}
+
+
+/* CAMPOS GENERADOS */
+
+.campos-credenciales input[readonly] {
+    background: #f3f6f9;
+}
+
+
+/* NOTA MÁS PEQUEÑA */
+
+.nota-credenciales {
+    margin-top: 15px;
+    padding: 10px 12px;
+}
+
+
+/* ==========================================================
+   BOTONES
+   ========================================================== */
+
+.acciones-formulario {
+    margin-top: 20px;
+    padding-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-guardar,
+.btn-limpiar,
+.btn-volver {
+    min-height: 40px;
+}
+
+
+/* ==========================================================
+   LISTA DE ESTUDIANTES
+   ========================================================== */
+
+.lista-estudiantes {
+    padding: 24px;
+}
+
+.encabezado-lista {
+    margin-bottom: 18px;
+}
+
+
+/* BUSCADOR */
+
+.contenedor-busqueda {
+    width: 260px;
+}
+
+
+/* ==========================================================
+   TABLA
+   ========================================================== */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-estudiantes {
+    width: 100%;
+    min-width: 900px;
+    table-layout: auto;
+}
+
+.tabla-estudiantes th {
+    padding: 12px 10px;
+    font-size: 12px;
+}
+
+.tabla-estudiantes td {
+    padding: 12px 10px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+
+/* EVITAR QUE LOS BOTONES SE DESORDENEN */
+
+.tabla-estudiantes td:last-child {
+    white-space: nowrap;
+}
+
+
+/* BOTONES DE LA TABLA */
+
+.btn-editar,
+.btn-restablecer,
+.btn-eliminar {
+    padding: 7px 9px;
+    font-size: 11px;
+}
+
+
+/* ==========================================================
+   PANTALLAS MEDIANAS
+   ========================================================== */
+
+@media (max-width: 1300px) {
+
+    .campos-formulario {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campos-credenciales {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================================
+   TABLETS
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .campos-formulario {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .campos-credenciales {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-lista {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contenedor-busqueda {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================================================
+   CELULARES
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+    .campos-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campos-credenciales {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-admin,
+    .lista-estudiantes {
+        padding: 18px;
+    }
+
+    .acciones-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-guardar,
+    .btn-limpiar,
+    .btn-volver {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+
+/* ==========================================================
+   GESTIÓN DE CURSOS
+   ========================================================== */
+
+
+/* DESCRIPCIÓN DEL CURSO */
+
+.campo-descripcion {
+    margin-top: 20px;
+}
+
+.campo-descripcion textarea {
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 12px;
+
+    border: 1px solid #ccd7e2;
+
+    border-radius: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    color: #26364d;
+
+    resize: vertical;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.campo-descripcion textarea:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8,120,209,0.10);
+}
+
+
+/* BUSCADOR + FILTRO */
+
+.controles-cursos {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.controles-cursos select,
+.controles-cursos input {
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ccd7e2;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #26364d;
+
+    outline: none;
+}
+
+
+.controles-cursos select {
+    min-width: 180px;
+}
+
+
+.controles-cursos input {
+    width: 240px;
+}
+
+
+.controles-cursos select:focus,
+.controles-cursos input:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8,120,209,0.10);
+}
+
+
+@media (max-width: 900px) {
+
+    .controles-cursos {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .controles-cursos select,
+    .controles-cursos input {
+        width: 100%;
+    }
+
+}
+
+
+
+
+/* ==========================================================
+   GESTIÓN DE PROYECTOS
+   ========================================================== */
+
+
+/* NOTA INFORMATIVA */
+
+.nota-proyecto {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    background: #eaf5ff;
+
+    border-left: 4px solid #0878d1;
+
+    border-radius: 7px;
+
+    color: #38536f;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* FILTRO + BUSCADOR */
+
+.controles-proyectos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.controles-proyectos select,
+.controles-proyectos input {
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ccd7e2;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #26364d;
+
+    outline: none;
+}
+
+
+.controles-proyectos select {
+    min-width: 180px;
+}
+
+
+.controles-proyectos input {
+    width: 240px;
+}
+
+
+.controles-proyectos select:focus,
+.controles-proyectos input:focus {
+    border-color: #0878d1;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 120, 209, 0.10);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .controles-proyectos {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .controles-proyectos select,
+    .controles-proyectos input {
+        width: 100%;
+    }
+
+}

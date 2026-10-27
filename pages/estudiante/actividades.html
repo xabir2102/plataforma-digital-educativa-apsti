@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Actividades - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/estudiante.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="estudiante-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="estudiante.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a
+                href="actividades.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📚
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a href="avisos.html">
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="estudiante-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Actividades
+            </h2>
+
+
+            <div class="usuario">
+
+                🎓
+
+                <span>
+                    Estudiante
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- BANNER -->
+
+            <div class="banner-estudiante">
+
+
+                <div>
+
+                    <span class="banner-etiqueta">
+                        Información académica
+                    </span>
+
+
+                    <h1>
+                        Actividades
+                    </h1>
+
+
+                    <p>
+                        Consulta las actividades, indicaciones
+                        y recursos publicados por tus docentes.
+                    </p>
+
+                </div>
+
+
+                <div class="banner-icono">
+                    📝
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 ENCABEZADO Y FILTROS
+            =========================================== -->
+
+            <div class="cabecera-consulta">
+
+
+                <div>
+
+                    <h2>
+                        Actividades publicadas
+                    </h2>
+
+                    <p>
+                        Consulta las actividades disponibles
+                        para los estudiantes.
+                    </p>
+
+                </div>
+
+
+                <div class="filtros-estudiante">
+
+
+                    <!-- SEMESTRE -->
+
+                    <select id="filtroSemestreActividad">
+
+                        <option value="Todos">
+                            Todos los semestres
+                        </option>
+
+                        <option value="I">
+                            I Semestre
+                        </option>
+
+                        <option value="II">
+                            II Semestre
+                        </option>
+
+                        <option value="III">
+                            III Semestre
+                        </option>
+
+                        <option value="IV">
+                            IV Semestre
+                        </option>
+
+                        <option value="V">
+                            V Semestre
+                        </option>
+
+                        <option value="VI">
+                            VI Semestre
+                        </option>
+
+                    </select>
+
+
+                    <!-- TIPO -->
+
+                    <select id="filtroTipoActividad">
+
+                        <option value="Todos">
+                            Todos los tipos
+                        </option>
+
+                        <option value="Práctica">
+                            Práctica
+                        </option>
+
+                        <option value="Investigación">
+                            Investigación
+                        </option>
+
+                        <option value="Lectura">
+                            Lectura
+                        </option>
+
+                        <option value="Proyecto">
+                            Proyecto
+                        </option>
+
+                        <option value="Otro">
+                            Otro
+                        </option>
+
+                    </select>
+
+
+                    <!-- BUSCADOR -->
+
+                    <input
+                        type="search"
+                        id="buscarActividadEstudiante"
+                        placeholder="Buscar actividad..."
+                    >
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 CONTADOR
+            =========================================== -->
+
+            <div class="resumen-consulta">
+
+                <span>
+                    📝
+                </span>
+
+                <p>
+
+                    Se encontraron
+
+                    <strong id="cantidadActividades">
+                        0
+                    </strong>
+
+                    actividades.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 LISTADO DE ACTIVIDADES
+            =========================================== -->
+
+            <div
+                id="listaActividadesEstudiante"
+                class="grid-consulta"
+            >
+
+
+                <div class="sin-resultados">
+
+                    <span>
+                        📝
+                    </span>
+
+                    <h3>
+                        No hay actividades disponibles
+                    </h3>
+
+                    <p>
+                        Actualmente no existen actividades
+                        publicadas para mostrar.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-estudiante">
+
+
+                <div>
+
+                    <h3>
+                        Actividades educativas
+                    </h3>
+
+                    <p>
+                        Aquí podrás consultar las indicaciones y
+                        recursos de las actividades publicadas
+                        por tus docentes.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-estudiante">
+
+
+                    <a
+                        href="estudiante.html"
+                        class="btn-principal"
+                    >
+                        🏠 Volver al panel
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/estudiante/estudiante-actividades.js"></script>
+
+
+</body>
+
+</html>

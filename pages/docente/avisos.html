@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gestión de Avisos - APSTI</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/docente.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="docente-container">
+
+
+    <!-- ==========================================
+         MENÚ LATERAL
+    =========================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <h1>🎓 APSTI</h1>
+
+            <p>
+                Plataforma Digital Educativa
+            </p>
+
+        </div>
+
+
+        <nav class="menu">
+
+
+            <a href="docente.html">
+
+                <span class="menu-icono">
+                    🏠
+                </span>
+
+                Inicio
+
+            </a>
+
+
+            <a href="actividades.html">
+
+                <span class="menu-icono">
+                    📝
+                </span>
+
+                Actividades
+
+            </a>
+
+
+            <a href="materiales.html">
+
+                <span class="menu-icono">
+                    📖
+                </span>
+
+                Material educativo
+
+            </a>
+
+
+            <a
+                href="avisos.html"
+                class="activo"
+            >
+
+                <span class="menu-icono">
+                    📢
+                </span>
+
+                Avisos
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span class="menu-icono">
+                    💻
+                </span>
+
+                Proyectos
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>
+                APSTI
+            </strong>
+
+            <p>
+                "Formando profesionales para un mejor futuro"
+            </p>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+    =========================================== -->
+
+    <main class="docente-main">
+
+
+        <!-- BARRA SUPERIOR -->
+
+        <header class="topbar">
+
+
+            <h2>
+                Gestión de avisos
+            </h2>
+
+
+            <div class="usuario">
+
+                👨‍🏫
+
+                <span>
+                    Docente
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- ==========================================
+             CONTENIDO
+        =========================================== -->
+
+        <section class="contenido">
+
+
+            <!-- BANNER -->
+
+            <div class="banner-docente">
+
+
+                <h1>
+                    Gestión de Avisos
+                </h1>
+
+
+                <p>
+                    Publica comunicados e información importante
+                    para mantener informados a los estudiantes
+                    del programa APSTI.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 FORMULARIO
+            =========================================== -->
+
+            <form
+                id="formAviso"
+                class="formulario-docente"
+            >
+
+
+                <div class="titulo-formulario">
+
+                    <h2>
+                        Publicar aviso
+                    </h2>
+
+                    <p>
+                        Completa la información del comunicado
+                        que deseas compartir con los estudiantes.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CAMPOS -->
+
+                <div class="campos-formulario">
+
+
+                    <!-- TÍTULO -->
+
+                    <div class="campo">
+
+                        <label for="tituloAviso">
+                            Título del aviso
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tituloAviso"
+                            name="tituloAviso"
+                            placeholder="Ejemplo: Cambio de horario"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SEMESTRE -->
+
+                    <div class="campo">
+
+                        <label for="semestreAviso">
+                            Dirigido a
+                        </label>
+
+                        <select
+                            id="semestreAviso"
+                            name="semestreAviso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Todos">
+                                Todos los estudiantes
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TIPO -->
+
+                    <div class="campo">
+
+                        <label for="tipoAviso">
+                            Tipo de aviso
+                        </label>
+
+                        <select
+                            id="tipoAviso"
+                            name="tipoAviso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Académico">
+                                Académico
+                            </option>
+
+                            <option value="Informativo">
+                                Informativo
+                            </option>
+
+                            <option value="Recordatorio">
+                                Recordatorio
+                            </option>
+
+                            <option value="Evento">
+                                Evento
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- FECHA -->
+
+                    <div class="campo">
+
+                        <label for="fechaAviso">
+                            Fecha de publicación
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaAviso"
+                            name="fechaAviso"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PRIORIDAD -->
+
+                    <div class="campo">
+
+                        <label for="prioridadAviso">
+                            Prioridad
+                        </label>
+
+                        <select
+                            id="prioridadAviso"
+                            name="prioridadAviso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Normal">
+                                Normal
+                            </option>
+
+                            <option value="Importante">
+                                Importante
+                            </option>
+
+                            <option value="Urgente">
+                                Urgente
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ESTADO -->
+
+                    <div class="campo">
+
+                        <label for="estadoAviso">
+                            Estado
+                        </label>
+
+                        <select
+                            id="estadoAviso"
+                            name="estadoAviso"
+                            required
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Publicado">
+                                Publicado
+                            </option>
+
+                            <option value="Borrador">
+                                Borrador
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CONTENIDO -->
+
+                <div class="campo campo-descripcion">
+
+                    <label for="contenidoAviso">
+                        Contenido del aviso
+                    </label>
+
+                    <textarea
+                        id="contenidoAviso"
+                        name="contenidoAviso"
+                        placeholder="Escribe aquí la información que deseas comunicar..."
+                        maxlength="600"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- NOTA -->
+
+                <div class="nota-docente">
+
+                    <span>
+                        ℹ️
+                    </span>
+
+                    <p>
+                        Los avisos con estado "Publicado" estarán
+                        destinados a ser consultados por los estudiantes.
+                        Puedes dirigir un aviso a todos los estudiantes
+                        o solamente a un semestre.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BOTONES -->
+
+                <div class="acciones-formulario">
+
+
+                    <button
+                        type="submit"
+                        class="btn-guardar"
+                    >
+                        📢 Publicar aviso
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="btn-limpiar"
+                    >
+                        🧹 Limpiar
+                    </button>
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-volver"
+                    >
+                        ← Volver al panel
+                    </a>
+
+
+                </div>
+
+
+            </form>
+
+
+
+            <!-- ==========================================
+                 AVISOS PUBLICADOS
+            =========================================== -->
+
+            <div class="lista-docente">
+
+
+                <div class="encabezado-lista">
+
+
+                    <div>
+
+                        <h2>
+                            Avisos registrados
+                        </h2>
+
+                        <p>
+                            Consulta y administra los comunicados
+                            publicados.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="controles-docente">
+
+
+                        <!-- FILTRO -->
+
+                        <select id="filtroSemestreAviso">
+
+                            <option value="Todos">
+                                Todos los avisos
+                            </option>
+
+                            <option value="I">
+                                I Semestre
+                            </option>
+
+                            <option value="II">
+                                II Semestre
+                            </option>
+
+                            <option value="III">
+                                III Semestre
+                            </option>
+
+                            <option value="IV">
+                                IV Semestre
+                            </option>
+
+                            <option value="V">
+                                V Semestre
+                            </option>
+
+                            <option value="VI">
+                                VI Semestre
+                            </option>
+
+                        </select>
+
+
+                        <!-- BUSCADOR -->
+
+                        <input
+                            type="search"
+                            id="buscarAviso"
+                            placeholder="Buscar aviso..."
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TABLA -->
+
+                <div class="tabla-contenedor">
+
+
+                    <table class="tabla-docente">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Aviso</th>
+
+                                <th>Dirigido a</th>
+
+                                <th>Tipo</th>
+
+                                <th>Fecha</th>
+
+                                <th>Prioridad</th>
+
+                                <th>Estado</th>
+
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody id="tablaAvisos">
+
+
+                            <tr>
+
+                                <td
+                                    colspan="7"
+                                    class="sin-registros"
+                                >
+                                    No hay avisos registrados actualmente.
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==========================================
+                 INFORMACIÓN INFERIOR
+            =========================================== -->
+
+            <div class="info-docente">
+
+
+                <div>
+
+                    <h3>
+                        Comunicados académicos
+                    </h3>
+
+                    <p>
+                        Mantén informados a los estudiantes mediante
+                        avisos y comunicados académicos.
+                    </p>
+
+                </div>
+
+
+                <div class="botones-docente">
+
+
+                    <a
+                        href="docente.html"
+                        class="btn-inicio"
+                    >
+                        🏠 Panel del docente
+                    </a>
+
+
+                    <a
+                        href="../../index.html"
+                        class="btn-salir"
+                    >
+                        🚪 Cerrar sesión
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="../../js/docente/docente-avisos.js"></script>
+
+
+</body>
+
+</html>
